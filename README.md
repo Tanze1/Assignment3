@@ -3,20 +3,23 @@ Install Hadoop
 
 Step 1 - 
 Download and extract Hadoop
-Download Hadoop from their official website and unzip the file. We'll be using Hadoop 3.2.1 https://www.apache.org/dyn/closer.cgi/hadoop/common/hadoop-3.2.1/hadoop-3.2.1.tar.gz
+Download Hadoop from their official website and unzip the file. We'll be using Hadoop 3.2.1.
+https://www.apache.org/dyn/closer.cgi/hadoop/common/hadoop-3.2.1/hadoop-3.2.1.tar.gz
 Hadoop is portable so you can store it on an external hard drive. For the purpose of documentation, I will extract it to C:/Users/Anthony/Documents/cp-master.
 
 If there are permission errors, run your unzipping program as administrator and unzip again.
 
 Install Hadoop native IO binary
-Clone or download the winutils https://github.com/cdarlint/winutils
-repository and copy the contents of hadoop-3.2.1/bin into the extracted location of the Hadoop binary package. In our example, it will be C:\Users\Anthony\Documents\cp-master\hadoop-3.2.1\bin
+Clone or download the winutils repository 
+https://github.com/cdarlint/winutils
+and copy the contents of hadoop-3.2.1/bin into the extracted location of the Hadoop binary package. In our example, it will be C:\Users\Anthony\Documents\cp-master\hadoop-3.2.1\bin
 
 Install Java JDK
 Java JDK is required to run Hadoop, so if you haven't installed it, install it.
 
-Oracle requires you sign up and login to download it. I suggest you find an alternative resource to download it from for example here  https://enos.itcollege.ee/~jpoial/allalaadimised/jdk8/
-This resource might not exist forever, so Google JDK version download'.
+Oracle requires you sign up and login to download it. I suggest you find an alternative resource to download it from for example here (JDK 8u261)
+https://enos.itcollege.ee/~jpoial/allalaadimised/jdk8/
+This resource might not exist forever, so Google 'jdk version download'.
 
 Run the installation file and the default installation directory will be C:\Program Files\Java\jdk1.8.0_261.
 
@@ -25,7 +28,7 @@ After installation, open up CMD or Powershell and confirm Java is intalled:
 $ java -version
 java version "1.8.0_261"
 Java(TM) SE Runtime Environment (build 1.8.0_261-b12)
-Java HotSpotTM 64-Bit Server VM (build 25.261-b12, mixed mode)
+Java HotSpot(TM) 64-Bit Server VM (build 25.261-b12, mixed mode)
 
 Step 2 - 
 Configure environment variables
@@ -57,8 +60,8 @@ After setting those environment variables, you reopen CMD or Powershell and veri
 
 $ hadoop -version
 java version "1.8.0_261"
-JavaTM SE Runtime Environment build 1.8.0_261-b12
-Java HotSpotTM 64-Bit Server VM build 25.261-b12, mixed mode 
+Java(TM) SE Runtime Environment (build 1.8.0_261-b12)
+Java HotSpot(TM) 64-Bit Server VM (build 25.261-b12, mixed mode) 
 
 Configure core site
 Edit core-site.xml and replace the configuration element with the following:
@@ -71,7 +74,7 @@ Edit core-site.xml and replace the configuration element with the following:
 </configuration>
 
 Configure HDFS
-Create two folders, one for the name node directory and another for the data directory. The following are the two created folders in this example:
+Create two folders, one for the namenode directory and another for the data directory. The following are the two created folders in this example:
 
 C:\Users\Anthony\Documents\cp-master\hadoop-3.2.1\data\dfs\namespace_logs
 C:\Users\Anthony\Documents\cp-master\hadoop-3.2.1\data\dfs\data
